@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero-section {
+    position: relative;
+    background: url('https://t3.ftcdn.net/jpg/00/57/94/82/360_F_57948206_Q8nusZslpT2fZg1Q4Qh6hdb4Gwg0DGfU.jpg') no-repeat center center/cover;
+    color: rgb(255, 255, 255);
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 0;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity to darken */
+    z-index: -1; /* Ensure the overlay is behind the content */
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Ensure content is above the overlay */
+}
+
+h1, p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+
+.about-section, .features-section, .contact-section {
+    padding: 60px 0;
+}
+
+.features-section {
+    background-color: #f8f9fa;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+}
+
+iframe {
+    border: none;
+    max-width: fit-content;
+}
